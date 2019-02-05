@@ -1,0 +1,34 @@
+{
+  "name": "babel-plugin-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-pipe-operator": "^1.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "build:watch": "yarn build -- -w",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register",
+    "test:watch": "yarn test -- -w",
+    "lint": "eslint **/*.js --quiet"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "lodash": "^4.17.11"
+  }
+}

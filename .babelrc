@@ -1,0 +1,4 @@
+{
+  "plugins": ["pipe-operator"],
+  "presets": ["@babel/preset-env"]
+}
